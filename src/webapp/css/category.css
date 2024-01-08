@@ -1,0 +1,468 @@
+
+.category{
+	width: 59%;
+}
+
+/* ▼カテゴリータイトルエリア */
+.category-title {
+	width: 100%;
+	height: 174px;
+	position: relative;
+	color: white;
+}
+
+.category-title::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background-color: rgba(0, 0, 0, 0.5);
+}
+
+.category-title>img {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+
+}
+
+.cat-feature {
+	position: absolute;
+	left: 28px;
+	top: 32px;
+	font-size: 20px;
+	font-weight: 400;
+	margin: 0;
+}
+
+.cat-name {
+	position: absolute;
+	left: 28px;
+	top: 60px;
+	font-size: 45px;
+	font-weight: 400;
+	margin: 0;
+}
+
+.category-comment {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: auto;
+	padding: 5px;
+	bottom: 0;
+	background: black;
+	font-size: 13px;
+	font-weight: 400;
+	position: absolute;
+}
+
+/* ▲カテゴリータイトルエリア */
+
+
+/* ▼検索フォーム&タグエリア */
+.search-content {
+	width: 100%;
+	background: #D9D9D9;
+	margin-top: 50px;
+}
+
+.input-keyword {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	padding: 15px 0;
+	margin-left: 20px;
+}
+
+.categoryInputBox{
+	padding-left: 5px;
+	height: 24px;
+}
+
+.my-parts {
+	display: inline-block;
+	width: 50px;
+	height: 50px;
+	font-size: 50px;
+	position: relative;
+	cursor: pointer;
+	background: none;
+	border: none;
+}
+
+.my-parts span {
+	position: absolute;
+	display: block;
+	top: 54%;
+	left: 30%;
+	width: 40%;
+	height: 40%;
+	border-radius: 50%;
+	margin: -.28em 0 0 -.28em;
+	border: .12em solid gray;
+}
+.my-parts span:hover{
+	opacity: 0.8;
+}
+
+.my-parts span::after {
+	position: absolute;
+	display: block;
+	content: "";
+	top: 50%;
+	left: 50%;
+	width: 72%;
+	height: 36%;
+	background: gray;
+	margin: .2em 0 0 .14em;
+	transform: rotate(45deg);
+}
+
+/* ▼タグ */
+
+/* タグ一覧 */
+.search-content .tag-list {
+	background-color: #adadad;
+	max-height: 70px;
+	overflow: hidden;
+	transition: max-height 0.5s ease;
+}
+
+/* アコーディオンボタン */
+.search-content .tag-accordion-button {
+	display: block;
+	text-align: center;
+	padding: 5px;
+}
+
+/* アコーディオンボタンのアイコン */
+.search-content .tag-accordion-button::before {
+    content: "▼";
+}
+
+.search-content .tag-accordion-button.openButton::before {
+    content: "▲";
+}
+
+.search-content .tag-accordion-button:hover {
+	background-color: rgb(192, 192, 192);
+	cursor: pointer;
+}
+
+/* ボタンを押すとjsで追加されるクラス */
+.search-content .openClause{
+	max-height: 1500px;
+	transition: max-height 2s ease-out;
+}
+
+.tag {
+	margin-top: 13px;
+	margin-left: 10px;
+	padding-bottom: 13px;
+}
+
+.tag ul {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.tag ul li {
+	display: inline-block;
+	width: 100px;
+	margin: 0 .5em .3em 1em;
+	padding: 0;
+}
+
+.tag ul li a {
+	position: relative;
+	display: inline-block;
+	height: 30px;
+	width: 100px;
+	line-height: 30px;
+	padding: 0 1em;
+	background-color: #6d7782;;
+	border-radius: 0 3px 3px 0;
+	color: #fff;
+	font-size: 13px;
+	text-decoration: none;
+	-webkit-transition: .2s;
+	transition: .2s;
+
+}
+
+.tag ul li a::before {
+	position: absolute;
+	left: -17px;
+	content: '';
+	width: 0;
+	height: 0;
+	border-color: #6d7782;;
+	border-style: solid;
+	border-width: 15px 15px 15px 0.5px;
+	-webkit-transition: .2s;
+	transition: .2s;
+}
+
+.tag ul li span {
+	display: block;
+	min-width: 35px;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
+}
+
+.tag ul li a:hover {
+	background-color: #555;
+	color: #fff;
+}
+
+.tag ul li a:hover::before {
+	border-right-color: #555;
+}
+
+/* ▲タグ */
+/* ▲検索フォーム&タグエリア */
+
+.more {
+	background: #0058B0;
+	color: #fff;
+	width: 200px;
+	text-align: center;
+	padding: 5px;
+	cursor: pointer;
+}
+
+li {
+	margin: 0 0 5px;
+}
+
+/* ▼検索結果&ソートエリア */
+.result-container {
+	margin: 40px 0 20px;
+}
+
+.sort-area {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+}
+
+.sort-area>p {
+	font-size: 24px;
+	font-weight: 400;
+	margin-left: -10px;
+}
+
+/* ▼ドロップダウンメニュー */
+.dropdown {
+	width: 160px;
+	height: 31px;
+	position: relative;
+	display: inline-block;
+	text-align: center;
+	border: solid 1px black;
+	color: black;
+}
+
+.dropdown:hover {
+	background-color: lightgray;
+}
+
+.dropbtn {
+	background-color: transparent;
+	font-size: 16px;
+	border: none;
+	cursor: pointer;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%)
+}
+
+.dropdown-content {
+	display: none;
+	position: absolute;
+	top: 31px;
+	width: 100%;
+	background-color: #f9f9f9;
+	box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+	z-index: 1;
+}
+
+.dropdown-content a {
+	color: black;
+	padding: 12px 16px;
+	text-decoration: none;
+	display: block;
+}
+
+.dropdown-content a:hover {
+	background-color: #f1f1f1
+}
+
+.dropdown:hover .dropdown-content {
+	display: block;
+}
+
+/* ▲ドロップダウンメニュー */
+
+/* ▲検索結果&ソートエリア */
+
+
+
+/* ▼レシピ一覧エリア */
+.recipe-card-container {
+	display: flex;
+	flex-wrap:wrap;
+	place-items: center;
+	gap: 20px;
+}
+
+.recipe-card {
+	width: 30%;
+	min-width: 200px;
+	height: 270px;
+	margin: 0 auto;
+	position: relative;
+}
+
+.recipe-card:hover {
+	text-decoration: underline;
+}
+
+.recipe-link {
+	text-decoration: none;
+	color: black;
+}
+
+.recipe-img-box {
+	overflow: hidden;
+	border: 3px solid black;
+	width: 100%;
+	aspect-ratio: 9 / 5;
+}
+
+.recipe-img {
+	object-fit: cover;
+	width: 100%;
+	aspect-ratio: 9 / 5;
+	transition: all 0.2s ease-out;
+}
+
+.recipe-img:hover {
+	transform: scale(1.1);
+	filter: brightness(1.1);/* 輝度を上げる */
+}
+
+.label-area {
+	position: absolute;
+	top: 2%;
+	left: 2%;
+	display: flex;
+	align-items: center;
+	gap: 5px;
+	margin-left: 5px;
+}
+
+.recipe-info {
+	width: 90%;
+}
+
+.name-and-cal {
+	margin-top: 10px;
+	margin-bottom: 0;
+}
+
+.time-and-cost {
+	margin: 0;
+}
+
+.post-time {
+	font-size: 13px;
+	margin-top: 20px;
+}
+
+/* ▲レシピ一覧エリア */
+
+
+
+/* ▼ページネーションエリア */
+.pagenation-box {
+	display: flex;
+	gap: 5%;
+	justify-content: center;
+	align-items: center;
+	margin-top: 30px;
+}
+
+.pagenation {
+	display: block;
+	position: relative;
+	width: 45px;
+	height: 44px;
+	background: black;
+}
+
+.pagenation:hover {
+	background: #696969;
+}
+
+.pagenation>p {
+	position: absolute;
+	font-size: 20px;
+	color: white;
+	text-decoration: none;
+	top: 50%;
+	left: 50%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%)
+}
+
+/* ▲ページネーションエリア */
+
+/* スマホ対応 */
+@media screen and (max-width:846px) {
+	
+	.category{
+		width: 100%;
+	}
+	
+	.cat-name{
+		font-size: 35px;
+	}
+	
+	.result-container {
+		margin: 40px 40px 20px;
+	}
+	
+	.recipe-card{
+		min-width: 290px;
+	}
+	
+	.input-keyword {
+		flex-direction: column;
+		align-items: baseline;
+	}
+	
+	/* ソートボタンの幅 */
+	.dropdown{
+		width: 100px;
+	}
+	
+	.sort-area{
+		flex-direction: column;
+		align-items: start;
+		height: 80px;
+	}
+	
+}

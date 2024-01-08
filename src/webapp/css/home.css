@@ -1,0 +1,56 @@
+.home{
+	display: flex;
+	justify-content: center;
+	gap: 80px;
+	margin-top: 100px;
+	margin-bottom: 200px;
+}
+
+.home-img{
+	width: 100%;
+	margin-top: 127px;
+}
+
+.home-img img{
+	width: 100%;
+}
+
+.content{
+	width: 50%;
+}
+
+.home-block a img, .home-block img{
+	margin-bottom: 10%;
+	width: 100%;
+	transition:0.3s;
+}
+
+.home-block a img:hover{
+	transform:scale(1.01);
+	opacity: 0.9;
+	transition:0.3s;
+}
+
+/* リンクホバー時に拡大部分がはみ出ないようにする */
+.home-block{
+	overflow:hidden;
+}
+
+/* スマホ対応 */
+@media screen and (max-width:846px) {
+	
+	.home{
+		flex-direction: column;
+		margin-top: 80px;
+		margin-bottom: 50px;
+	}
+	
+	.home-img{
+		margin-top: 76px;
+	}
+	
+	.content{
+		width: 100%;
+	}
+
+}

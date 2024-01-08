@@ -1,0 +1,45 @@
+<header id="header">
+	
+	<div class="headerMain">
+		<a class="logoLink" href="/HealthyRecipeProject/home"><img class="logo" id="headerLogo" src="./img/logo/logo.png" /></a>
+		<ul class="headerList">
+			<li><a href="/HealthyRecipeProject/category">すべてのレシピ</a></li>
+			<li class="headerList-border"><a href="/HealthyRecipeProject/category?category=1">筋トレ</a></li>
+			<li class="headerList-border"><a href="/HealthyRecipeProject/category?category=2">ダイエット</a></li>
+			<li class="headerList-border"><a href="/HealthyRecipeProject/category?category=3">健康</a></li>
+			<li class="headerList-border"><a class="searchButton" href="#">Search...</a></li>
+		</ul>
+	</div>
+	
+	<div class="searchForm">
+		<form action="category" method="get">
+			<input class="inputBox" type="search" name="keyword" placeholder="キーワードを入力">
+			<input type="image" class="searchImg"  src="./img/logo/search.png" alt="送信する">
+		</form>
+	</div>
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+	<script>
+		// スクロール時にヘッダーを小さくする処理
+		var header = $("#header");
+		var logo = $("#headerLogo");
+		$scrollTopDistance = $(window).scrollTop();
+		var headerHeight = 50;
+		// スクロールした時の操作
+		$(window).on('scroll', function() {
+			$scrollTopDistance = $(window).scrollTop();
+			if($scrollTopDistance >= headerHeight){
+				logo.addClass('is_scroll');
+			}else if($scrollTopDistance <= headerHeight){
+				logo.removeClass('is_scroll');
+			}
+		});
+		
+		// Searchボタンを押した際に検索バーを表示
+		document.querySelector('.searchButton').addEventListener('click',function(event) {
+			event.preventDefault(); // リンクが動かないようにする
+			var serchOpen = document.querySelector('.searchForm');
+			serchOpen.classList.toggle('serchOpen');
+		});
+	</script>
+</header>

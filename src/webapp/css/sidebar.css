@@ -1,0 +1,205 @@
+.sideNav{
+	width: 27%;
+	min-width: 250px;
+}
+
+.sidebar{
+	width: 100%;
+}
+
+.sidebar a, .sidebar p{
+	margin: 16px 0;
+}
+
+/* ▼アフィリエイト */
+.back-number-box {
+	width: 100%;
+	background: black;
+}
+
+.issue-box {
+	display: flex;
+	justify-content: space-around;
+	color: white;
+}
+
+.book-img-box {
+	text-align: center;
+	font-size: 20px;
+	position: relative;
+}
+
+.book-img-box > a:hover {
+  	opacity: 0.7;
+}
+
+.book-img-box > a > img {
+	width: 74%;
+	height: auto;
+	border: 1px black solid;
+}
+
+.health-and-money {
+	text-align: center;
+	color: white;
+}
+
+.link-box {
+	display: flex;
+	justify-content: center;
+	gap: 10px;
+	margin-bottom: 10px;
+}
+
+.book-link {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 40%;
+	height: 35px;
+	background: white;
+	border-radius: 10px;
+	margin-bottom: 25px;
+	position: relative;
+}
+
+.book-link:hover {
+	background: lightgray;
+}
+
+.book-link > a {
+	position:absolute;
+  	top:0;
+  	left:0;
+  	width:100%;
+  	height:100%;
+}
+
+.book-link > p {
+	font-size: 13px;
+	color: black;
+	margin: 0;
+}
+/* ▲アフィリエイト */
+
+.Line{
+	margin: 30px 0;
+	width: 100%;
+	height: 10px;
+	transform-origin: 0 0;
+	border-top: 1px black solid
+}
+
+/* ▼総合ランキング */
+.ranking-section {
+	display:flex;
+	flex-direction: column;
+	align-items: center;
+	width: 100%;
+	text-align: center;
+	border: 1px black solid
+}
+
+.ranking-section > p {
+	font-weight: bold;
+}
+
+.rank-content {
+	width: 75%;
+	position: relative;
+	margin-bottom: 20px;
+}
+
+.rank-recipe-box {
+	width:100%;
+  	height:100%;
+	overflow: hidden;
+	position: relative;
+}
+
+.rank-recipe-img {
+	object-fit: cover;
+    width: 100%;
+    height: 100%;
+	transition: all 0.3s ease-out;
+}
+
+/* ホバー時のアニメーション */
+.rank-img {
+	display: flex;
+	justify-content: space-between;
+	position: absolute;
+	top: 0;
+}
+
+/* main-category-labelのCSSはstyle.cssの共通部分に記載してます */
+/* カテゴリーラベル */
+.rank-content > .main-category-label {
+	position: absolute;
+	top: 0;
+	right: 5px;
+}
+
+/* ランキングのレシピリンク */
+.recipe-nameLink {
+	display: block;
+}
+
+/* ランキングのレシピ名 */
+.recipe-name-area {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+    height: 22px;
+    background: rgba(0, 0, 0, 0.60);
+	color: white;
+	font-size: 13px;
+	font-weight: 400;
+	position: absolute;
+	bottom: 0;
+	transition: 0.5s;
+}
+
+.rank-content:nth-child(n+5) .recipe-name-area {
+	height: 0; /* レシピ名を隠しつつ、ホバー時に下から引き出すようにするため */
+	font-size: 0px;
+}
+
+/* ランキングホバー時にレシピ名を100%表示 */
+.rank-content:hover .recipe-name-area{
+	font-size: 13px; /* 消していた文字を復活 */
+	display: flex;
+	height: 100%;
+	transition: 0.5s;
+}
+
+/* ランキング１～３と以降の幅 */
+.rank-content:nth-child(-n+4) {
+	height: 115px;
+	aspect-ratio: 9 / 5;
+}
+.rank-content:nth-child(n+5) {
+	height: 70px;
+	aspect-ratio: 3 / 1;
+}
+
+.recipe-name-area p{
+	color: white;
+}
+
+/* ▲総合ランキング */
+
+/* スマホ対応 */
+@media screen and (max-width:846px) {
+	
+	.sideNav{
+		width: 100%;
+		min-width: 100px;
+	}
+
+	.ranking-section {
+		margin-bottom: 0px;
+	}
+	
+}

@@ -1,0 +1,65 @@
+/* インポート */
+@import url("./header.css");
+@import url("./home.css");
+@import url("./sidebar.css");
+@import url("./footer.css");
+@import url("./category.css");
+@import url("./recipDetail.css");
+
+*{
+	font-family: 'Noto Sans JP', sans-serif;
+}
+
+/* main */
+.main {
+	display: flex;
+	justify-content: center;
+	gap: 80px;
+	margin-top: 180px;
+	margin-bottom: 200px;
+}
+
+
+/* 共通 */
+.main-category-label {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 5px;
+}
+
+.main-category-label > p {
+	margin: 0 2px;
+	padding: 3px;
+	background-color: black;
+	color: white;
+	font-size: 11px;
+}
+
+input{
+	background-color: #fff;
+	border:1px solid;
+}
+
+a{
+	color: black;
+	text-decoration: none;
+	overflow-wrap: break-word;
+}
+
+.caution{
+	color: red;
+	margin: 10px 0%;
+}
+
+/* スマホ対応 */
+@media screen and (max-width:846px) {
+	
+	.main{
+		flex-direction: column;
+		margin-top: 80px;
+		margin-bottom: 50px;
+	}
+	
+}
+

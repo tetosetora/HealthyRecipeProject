@@ -1,0 +1,133 @@
+/* ▼全体設定エリア */
+.detail-main{
+	width: 40%;
+}
+
+.detail-main li{
+	margin-left: 30px;
+}
+/* ▲全体設定エリア */
+
+/* ▼上部ボックスエリア */
+.detail-top{
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	background-color: black;
+	border:1px solid;
+	margin-bottom: 50px;
+}
+
+.detail-top p{
+	padding: 8px 10px;
+}
+
+.detail-top-categoryCreatedAt{
+	display: flex;
+	justify-content: space-between;
+	color: white;
+}
+
+.detail-top-categoryCreatedAt-category{
+	display: flex;
+	justify-content: center;
+}
+
+.detail-top-categoryCreatedAt-category p{
+	padding: 3px;
+	font-size: 13px;
+	margin: 10px 0 3px 7px;
+	color: black;
+	background-color: white;
+}
+
+.detail-top-nameTag{
+	display: flex;
+	flex-direction: column;
+	color: #fffffff0;
+}
+
+.detail-top-nameTag-name{
+	font-size: 30px;
+	margin: 10px;
+}
+
+.detail-top-nameTag-tag{
+	display: flex;
+	flex-wrap: wrap;
+	font-size: 12px;
+	margin: 0 10px 10px 20px;
+}
+
+.detail-top-nameTag-tag a{
+	margin: 5px;
+	color: white;
+}
+
+.detail-top-img img{
+	width: 100%;
+}
+
+.detail-top-comment{
+	line-height: 19px;
+	background-color: white;
+}
+/* ▲上部ボックスエリア */
+
+/* ▼リストエリア */
+.detail-middle h2{
+	margin-top: 30px;
+	margin-bottom: 10px;
+}
+
+.detail-middle-nabeIcon::before{
+	content: url(../img/icon/nabe.jpeg);
+	width: 5px;
+	height: 5px;
+}
+
+.detail-middle-bikkuriIcon::before{
+	content: url(../img/icon/bikkuri.png);
+	vertical-align: sub;
+}
+
+.detail-middle-nabeIcon-nutrientsTitle{
+	float: left;
+}
+
+.detail-middle-nabeIcon-nutrients{
+	padding-left: 131px;
+	list-style: none;
+}
+
+.detail-middle-ul{
+	list-style: square;
+	margin-left: 16px;
+}
+
+.detail-middle-ol{
+	list-style: auto;
+	margin-left: 16px;
+}
+
+.detail-middle-link{
+	margin-left: 22px;
+}
+
+.detail-middle-URL{
+	color: chocolate;
+}
+
+.detail-middle-URL:hover{
+	opacity: 0.6;
+}
+
+/* ▲リストエリア */
+
+/* スマホ対応 */
+@media screen and (max-width:846px) {
+	
+	.detail-main{
+		width: 100%;
+	}
+}

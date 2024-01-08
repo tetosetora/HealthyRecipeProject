@@ -1,0 +1,79 @@
+・環境構築手順書
+  (ＤＢの構築など、
+   システムを構築する為に必要な、全ての手順を記述したもの)
+
+
+■１■　フォルダ構成やファイル配置
+
+エクリプスにて、動的webプロジェクト『HealthyRecipeProject』を作成する。
+プロジェクト内にて、以下のようにフォルダーを配置します。
+
+ HealthyRecipeProject
+  |
+  |_src
+  |  |
+  |  |_control
+  |  |  |
+  |  |  |_HomeControl.java
+  |  |  |_RecipeListControl.java
+  |  |  |_RecipeDetailControl.java
+  |  |  
+  |  |
+  |  |_model
+  |     |
+  |     |_Driver.java
+  |     |_RecipeDao.java
+  |     |_RecipeListDto.java
+  |     |_RecipeDetailDto.java
+  |     |_RankingDto.java
+  |     |_RecipeListSelect.java
+  |     |_RecipeDetailSelect.java
+  |     |_RecipeAccessCountInsert.java
+  |     |_RankingSelect.java
+  |     |_Utilities.java
+  |
+  |_WebContent
+     |
+     |_css
+     |  
+     |_template
+     |  
+     |_images
+     |  
+     |_WEB-INF
+     |  |
+     |  |_lib
+     |  |  
+     |  |_web.xml
+     |  
+     |_index.jsp
+     |_header.jsp
+     |_sidebar.jsp
+     |_footer.jsp
+     |_home.jsp
+     |_category.jsp
+     |_recipeDetail.jsp
+
+
+■２■　DBの構築
+
+スクリプトファイル『recipe_db.sql』をCドライブ直下に配置します。
+
+mysqlを操作可能になった状態で、以下のコマンドを実行します。
+『\. C:\recipe_db.sql』
+
+その後『SELECT * FROM (テーブル名)』を実行し、データベースが作成されていることを確認します。
+
+【データベースとテーブルの仕様】
+データベース名：recipe_db
+テーブル名：recipe_tbl, tag_tbl, category_tbl …
+カラムの名前と型：カッコ内は変更予定
+                （thread_id  int
+                  speaker    varchar(255) 
+                  content    text
+                  ymdhms     datetime）…
+
+※詳細はDBレイアウトを参照してください。
+
+
+
